@@ -19,6 +19,11 @@ type View = 'home' | 'about' | 'programs' | 'campus' | 'admissions' | 'contact';
 const isMaintenanceMode = true; // Set to true to enable maintenance mode
 
 const App: React.FC = () => {
+  // Immediate redirect to the new site
+  useEffect(() => {
+    window.location.replace("https://gsaloumrane.vercel.app/");
+  }, []);
+
   const [lang, setLang] = useState<Language>('ar');
   const [currentView, setCurrentView] = useState<View>('home');
   const [isScrolled, setIsScrolled] = useState(false);
