@@ -656,7 +656,7 @@ const App: React.FC = () => {
       <div className="max-w-2xl w-full text-center relative z-10 space-y-12 animate-reveal">
         <div className="flex flex-col items-center gap-6">
           <div className="bg-white/5 backdrop-blur-xl p-6 rounded-[2.5rem] border border-white/10 shadow-2xl group hover:scale-105 transition-transform duration-500">
-            <img src="/images/logo.png" alt="Logo" className="w-24 h-24 object-contain" />
+            {/* Logo Removed */}
           </div>
           <div className="space-y-2">
             <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tighter uppercase">
@@ -739,7 +739,6 @@ const App: React.FC = () => {
 
           {/* Logo & Name Section */}
           <div className={`flex items-center gap-3 cursor-pointer ${lang === 'ar' ? 'flex-row-reverse' : 'flex-row'}`} onClick={() => navigateTo('home')}>
-            <img src="/images/logo.png" alt={t('شعار مجموعة مدارس العمران', 'Logo Al Oumrane')} className="w-10 h-10 rounded-xl object-contain shadow-md" />
             <div className={`flex flex-col ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
               <h1 className="font-black text-lg tracking-tighter text-[#0f172a] leading-none uppercase">{t('لعرعري نت', 'LAARAARI NET')}</h1>
               <span className="text-[8px] font-bold text-[#f97316] uppercase tracking-[0.15em]">{t('لعرعري نت', 'LAARAARI NET')}</span>
@@ -782,7 +781,6 @@ const App: React.FC = () => {
               <X size={28} />
             </button>
             <div className={`flex items-center gap-3 ${lang === 'ar' ? 'flex-row-reverse' : 'flex-row'}`}>
-              <img src="/images/logo.png" alt="Logo" className="w-12 h-12 rounded-xl object-contain" />
               <div className={`${lang === 'ar' ? 'text-right' : 'text-left'}`}>
                 <div className="text-white font-black text-xl tracking-tighter uppercase">{t('لعرعري نت', 'LAARAARI NET')}</div>
                 <div className="text-[#f97316] text-[9px] font-bold uppercase tracking-widest">{t('لعرعري نت', 'LAARAARI NET')}</div>
@@ -829,7 +827,6 @@ const App: React.FC = () => {
             {/* Logo & Description */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-4 mb-6">
-                <img src="/images/logo.png" alt="Logo" className="w-16 h-16 rounded-2xl object-contain bg-white/10 p-2" />
                 <div>
                   <h3 className="font-black text-2xl tracking-tighter uppercase">{t('لعرعري نت', 'LAARAARI NET')}</h3>
                   <span className="text-[#f97316] text-xs font-bold uppercase tracking-widest">{t('التميز', 'Excellence')}</span>
