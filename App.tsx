@@ -16,6 +16,8 @@ import SmartTour from './components/SmartTour';
 
 type View = 'home' | 'about' | 'programs' | 'campus' | 'admissions' | 'contact';
 
+const isMaintenanceMode = true; // Set to true to enable maintenance mode
+
 const App: React.FC = () => {
   const [lang, setLang] = useState<Language>('ar');
   const [currentView, setCurrentView] = useState<View>('home');
@@ -643,6 +645,52 @@ const App: React.FC = () => {
       </div>
     </div>
   );
+
+  const MaintenanceView = () => (
+    <div className="min-h-screen bg-[#0f172a] flex items-center justify-center p-6 overflow-hidden relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-[#f97316]/10 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[35rem] h-[35rem] bg-indigo-500/10 rounded-full blur-[120px] animate-pulse delay-700" />
+      </div>
+
+      <div className="max-w-2xl w-full text-center relative z-10 space-y-12 animate-reveal">
+        <div className="flex flex-col items-center gap-6">
+          <div className="bg-white/5 backdrop-blur-xl p-6 rounded-[2.5rem] border border-white/10 shadow-2xl group hover:scale-105 transition-transform duration-500">
+            <img src="/images/logo.png" alt="Logo" className="w-24 h-24 object-contain" />
+          </div>
+          <div className="space-y-2">
+            <h1 className="text-4xl sm:text-6xl font-black text-white tracking-tighter uppercase">
+              {t('لعرعري نت', 'LAARAARI NET')}
+            </h1>
+            <div className="h-1.5 w-24 bg-gradient-to-r from-[#f97316] to-[#ea580c] mx-auto rounded-full" />
+          </div>
+        </div>
+
+        <div className="space-y-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#f97316] uppercase tracking-[0.2em]">
+            {t('الموقع في طور الصيانة', 'Site en Maintenance')}
+          </h2>
+          <p className="text-lg sm:text-xl text-slate-400 font-medium leading-relaxed">
+            {t('نحن نعمل على تحسين تجربتكم الرقمية. سنعود قريباً بهوية جديدة وخدمات متميزة.', 'Nous travaillons sur l\'amélioration de votre expérience. Nous reviendrons bientôt avec une nouvelle identité.')}
+          </p>
+        </div>
+
+        <div className="flex justify-center gap-4">
+          <div className="w-2 h-2 bg-[#f97316] rounded-full animate-bounce" />
+          <div className="w-2 h-2 bg-[#f97316] rounded-full animate-bounce delay-100" />
+          <div className="w-2 h-2 bg-[#f97316] rounded-full animate-bounce delay-200" />
+        </div>
+
+        <div className="pt-8 border-t border-white/5">
+          <p className="text-xs font-black text-slate-500 uppercase tracking-widest">
+            {t('شكراً لتفهمكم', 'Merci de votre compréhension')}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+
+  if (isMaintenanceMode) return <MaintenanceView />;
 
   return (
     <div className={`min-h-screen selection:bg-[#f97316] selection:text-white ${lang === 'ar' ? 'rtl-layout' : 'ltr-layout'}`}>
