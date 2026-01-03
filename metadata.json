@@ -1,0 +1,7 @@
+{
+  "name": "لعرعري نت",
+  "description": "الموقع الرسمي لـ لعرعري نت، مؤسسة تعليمية رائدة تقدم تعليماً ثنائي اللغة.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعرعري نت | Laaraari Net - Excellence in Education</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="لعرعري نت - أكثر من 25 سنة من التميز في التعليم الخاص. تسجيلات مفتوحة للموسم 2025-2026. نسبة نجاح 100% في الباكالوريا.">
+    <meta name="keywords" content="لعرعري نت, مدرسة خاصة, تعليم خاص, Laaraari Net, école privée">
+    <meta name="author" content="Laaraari Net">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://alomrane.ma">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alomrane.ma">
+    <meta property="og:title" content="لعرعري نت | Excellence in Education">
+    <meta property="og:description"
+        content="أكثر من 25 سنة من التميز في التعليم الخاص. تسجيلات مفتوحة للموسم 2025-2026.">
+    <meta property="og:image" content="/images/gsAloumrane.png">
+    <meta property="og:locale" content="ar_MA">
+    <meta property="og:locale:alternate" content="fr_MA">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="لعرعري نت | Excellence in Education">
+    <meta name="twitter:description" content="أكثر من 25 سنة من التميز في التعليم الخاص.">
+    <meta name="twitter:image" content="/images/gsAloumrane.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --omrane-navy: #0f172a;
+            --omrane-orange: #f97316;
+            --omrane-accent: #3b82f6;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #ffffff;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        .rtl-layout {
+            direction: rtl;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .ltr-layout {
+            direction: ltr;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* Smooth Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f8fafc;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f97316;
+        }
+
+        /* Premium Glass Effects */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.05);
+        }
+
+        .shadow-luxury {
+            box-shadow: 0 40px 100px -20px rgba(15, 23, 42, 0.08);
+        }
+
+        .shadow-orange-glow {
+            box-shadow: 0 20px 50px -10px rgba(249, 115, 22, 0.3);
+        }
+
+        /* Animations */
+        @keyframes floating {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(2deg);
+            }
+
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+
+        .animate-floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-reveal {
+            animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Hero Text Gradient */
+        .text-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-mesh {
+            background-color: #ffffff;
+            background-image: radial-gradient(at 0% 0%, hsla(25, 100%, 96%, 1) 0, transparent 50%),
+                radial-gradient(at 50% 0%, hsla(225, 39%, 95%, 1) 0, transparent 50%),
+                radial-gradient(at 100% 0%, hsla(339, 49%, 96%, 1) 0, transparent 50%);
+        }
+
+        /* Marquee Animation */
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-33.33%);
+            }
+        }
+
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+
+        /* Lazy Loading Image Animation */
+        img[loading="lazy"] {
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+        }
+
+        img[loading="lazy"].loaded {
+            opacity: 1;
+        }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body class="bg-mesh">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
